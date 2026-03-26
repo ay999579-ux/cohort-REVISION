@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: Big;
-    src: url(../fonts/FoundersGrotesk-Semibold.ttf);
+    src: url(./fonts/FoundersGrotesk-Semibold.ttf);
 }
 
 @font-face {
     font-family: small;
-    src: url(../fonts/NeueMontreal-Regular.ttf);
+    src: url(./fonts/NeueMontreal-Regular.ttf);
 }
 
 html,
