@@ -1,0 +1,711 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@font-face {
+    font-family: Big;
+    src: url(../fonts/FoundersGrotesk-Semibold.ttf);
+}
+
+@font-face {
+    font-family: small;
+    src: url(../fonts/NeueMontreal-Regular.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #111;
+    color: beige;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    
+}
+
+nav {
+    /* position: fixed; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+nav img {
+    height: 50px;
+    filter: invert(100%);
+}
+
+.ri-menu-fill {
+    display: none;
+    font-size: 25px;
+}
+
+nav .list {
+    font-family: small;
+    font-size: 25px;
+    display: flex;
+    gap: 35px;
+    font-weight: 400;
+}
+
+nav .list a {
+    text-decoration: none;
+    color: beige;
+}
+nav .list a:hover{
+    color: #c4c4c4;
+    font-weight: 900;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid #c4c4c4;
+}
+nav .toggle {
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.ri-search-line {
+    font-size: 25px;
+    font-family: small;
+    border-right: 2px solid #2e2d2d;
+    padding-right: 10px;
+}
+
+nav .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav button {
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2e2d2d;
+    background-color: transparent;
+    color: beige;
+    font-size: 20px;
+    font-family: small;
+    height: 5vh;
+
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* From Uiverse.io by alexruix */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: rgb(41, 41, 39);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px beige;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #616060;
+}
+
+input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px beige;
+}
+
+/* .page1------------ */
+.page1 {
+    min-height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page1 .top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page1 h1 {
+    width: 60%;
+    font-family: Big;
+    font-size: 10vh;
+    font-weight: 500;
+    text-align: center;
+}
+
+.page1 p {
+    color: #c4c4c4;
+    width: 40%;
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page1 .fields {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+}
+
+.page1 .fields p {
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page1 .field {
+    /* background-color: red; */
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.page1 .field h2 {
+    background-color: #222222;
+    border: 1px solid rgba(245, 245, 220, 0.189);
+    border-radius: 50px;
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    font-size: 3vh;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 10px;
+   
+}
+
+.page1 .field img {
+    width: 4vh;
+    filter: brightness(0) invert(50%);
+}
+
+/* page2 */
+.page2 {
+    min-height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.page2 .Features {
+    width: 90%;
+    height: 50vh;
+    border-bottom: 1px solid rgba(245, 245, 220, 0.155);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.page2 .Features .left {
+    width: 50%;
+    height: 100%;
+     overflow: hidden;
+   
+}
+
+.page2 .Features .left img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0px 20px 20px 0px;
+    transition: all 1s ease;
+    filter:grayscale(1);
+    cursor: pointer;
+      scale: 0.95;
+}
+
+.page2 .Features .left img:hover{
+    scale: 1;
+    filter:grayscale(0);
+}
+
+.page2 .Features .right {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px 0px 0px 20px;
+    gap: 20px;
+}
+
+.page2 .Features .left h1 {
+    font-family: Big;
+    font-size: 5vh;
+    font-weight: 400;
+    text-align: start;
+    letter-spacing: 2px;
+
+}
+
+.page2 .Features .right p span {
+    background-color: rgb(39, 37, 37);
+    color: beige;
+    padding: 5px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.page2 .Features .right p {
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page2 .Features .right h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: start;
+}
+
+.page2 .Features .right h4 {
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.page2 .Features .right button {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(245, 245, 220, 0.155);
+    background-color: transparent;
+    color: beige;
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page2 .Features .right button:hover{
+    background-color: rgba(67, 67, 66, 0.323);
+    color: beige;
+    cursor: pointer;
+    border: 1px solid rgba(245, 245, 220, 0.585);
+}
+
+/* page3 */
+.page3 {
+    min-height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page3 .cards {
+    width: 90%;
+    min-height: 80vh;
+    border-bottom: 1px solid rgba(245, 245, 220, 0.155);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.page3 .cards .card {
+    height: 60vh;
+    width: 50vh;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 20px;
+    color: rgb(211, 211, 205);
+}
+
+.page3 .card h1 {
+    font-family: Big;
+    font-size: 5vh;
+    font-weight: 400;
+    text-align: start;
+    letter-spacing: 2px;
+}
+
+.page3 .cards .card .img {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.page3 .cards .card .img img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.page3 .cards .card .name {
+    height: 10vh;
+    width: 100%;
+}
+
+.page3 .cards .card p {
+    width: 90%;
+    color: #696767;
+    font-family: small;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.page3 .cards .card h1 {
+    padding-top: 2vh;
+    font-size: 20px;
+}
+
+.page3 .cards .card h2 {
+    padding-top: 2vh;
+    font-size: 20px;
+}
+
+.page3 .cards #card2 .text1 {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-family: Big;
+
+}
+
+.page3 .cards #card2 .text1 h1 {
+    font: 5vh;
+    padding: 10px;
+    font-weight: 900;
+    color: #111;
+}
+
+.page3 .cards #card2 .text1 h2 {
+    border-radius: 20px;
+    padding: 10px;
+    letter-spacing: 1px;
+    background-color: #222;
+}
+
+.page3 .cards #card2 .text2 {
+    height: 70%;
+    font-size: 20px;
+}
+
+.page3 .cards #card2 .text2 h1 {
+    font-size: 40px;
+    mix-blend-mode: difference;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page3 .cards #card2 .text2 p {
+    font-size: 20px;
+    font-weight: 800;
+    mix-blend-mode: color-burn;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page3 .cards #card3 .skill {
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page3 .cards #card3 .work .naaaaam h1 {
+    /* background-color: red; */
+    width: 100%;
+    font-size: 30px;
+    mix-blend-mode: difference;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* page4 */
+.page4 {
+    min-height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page4 .subscribe {
+    width: 90%;
+    height: 50vh;
+    /* background-color: #222; */
+    border-radius: 20px;
+    padding: 20px;
+    color: rgb(211, 211, 205);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.page4 .subscribe h1 {
+    font-family: Big;
+    font-size: 6vh;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.page4 .subscribe p {
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+}
+
+.page4 .subscribe form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page4 .subscribe form input {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(245, 245, 220, 0.155);
+    background-color: transparent;
+    color: beige;
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page4 .subscribe form button {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(245, 245, 220, 0.155);
+    background-color: transparent;
+    color: beige;
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page4 .footer {
+    width: 90%;
+    height: 50vh;
+    background: linear-gradient(to bottom, #111, #222);
+    border-radius: 20px;
+    padding: 20px;
+    color: rgb(211, 211, 205);
+}
+
+.page4 .footer img {
+    filter: invert(100);
+    height: 6vh;    
+}
+.page4 .footer p{
+   font-family: small;
+   font-size: 20px;
+   font-weight: 400;
+   text-align: center;
+   color: #696767;
+   text-align: left;
+}
+.page4 .footer .social{
+    padding-top: 20px;
+}
+.page4 .footer .social i{
+    font-size: 20px;
+    color: #a9a7a7;
+}
+
+.page4 .footer .list2{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.page4 .footer .list2 .child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.page4 .footer .list2 .child h1{
+    font-family: Big;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: start;
+    letter-spacing: 2px;
+}
+.page4 .footer .list2 .child p{
+    font-family: small;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: start;
+    color: #696767;
+}
+
+/* mobile responsive */
+@media (max-width: 1024px) {
+    nav {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    nav .ri-menu-fill {
+        display: block;
+    }
+
+    nav img {
+        height: 40px;
+    }
+
+    nav .list {
+        display: none;
+    }
+
+    nav .toggle {
+        display: none;
+    }
+
+    /* page1 */
+    .page1 h1 {
+        width: 80%;
+        font-size: 8vh;
+    }
+
+    .page1 p {
+        width: 80%;
+    }
+
+    .page2 .Features {
+        flex-direction: column;
+        min-height: 100vh;
+        border-bottom: 1px solid rgb(65, 65, 62);
+
+    }
+
+    .page2 .Features .left {
+        width: 100%;
+        height: 50%;
+    }
+
+    .page2 .Features .right {
+        width: 100%;
+        height: 50%;
+    }
+
+    .page3 .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page3 .cards .card {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .page1 .field h2 {
+        font-size: 15px; 
+        display: flex;   
+        align-items: center;
+        justify-content: center; 
+    }
+
+        .page1 .field img{
+            height: 20px;
+            width: 20px;
+        }
+}
