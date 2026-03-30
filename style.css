@@ -778,3 +778,110 @@ input:checked+.slider:before {
        
     }
 }
+
+/* Landscape Mobile (14inch) */
+@media (max-width: 1400px) and (max-height: 900px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    nav .list,
+    nav .toggle {
+        display: none;
+    }
+
+    .ri-menu-fill {
+        display: block;
+    }
+
+    /* PAGE 1 */
+    .page1 {
+        padding: 20px 0;
+    }
+
+    .page1 h1 {
+        width: 90%;
+        font-size: 50px;
+    }
+
+    .page1 p {
+        width: 50%;
+        font-size: 13px;
+    }
+
+    .page1 .field {
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    /* PAGE 2 */
+    .page2 .Features {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
+
+    .page2 .Features .left,
+    .page2 .Features .right {
+        width: 100%;
+    }
+
+    .page2 .Features .left img {
+        height: auto;
+    }
+
+    /* PAGE 3 */
+    .page3 .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .page3 .cards .card {
+        width: 90%;
+        height: auto;
+    }
+
+    /* PAGE 4 */
+    .page4 .subscribe {
+        height: auto;
+        padding: 20px;
+    }
+
+    .page4 .subscribe h1 {
+        font-size: 18px;
+    }
+
+    .page4 .subscribe p {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .page4 .subscribe form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .page4 .subscribe form input,
+    .page4 .subscribe form button {
+        width: 100%;
+    }
+
+    .page4 .footer {
+        height: auto;
+    }
+
+    .page4 .footer .list2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
